@@ -36,7 +36,7 @@ class UsuariosDatos
         $cnn = new Conexion();
         $con = $cnn->conectar();
         
-        //Crear un objeto de Usuario y asignar valores pasados en los parametros 
+        //Crear un objeto de UsuariosDatos y asignar valores pasados en los parametros 
         $usuarios = new Usuarios();
         $usuarios->usuario = $usuario;
         $usuarios->contrasena = $pass;

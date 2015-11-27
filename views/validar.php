@@ -12,10 +12,13 @@ if(isset($_POST['usuario']) || isset($_POST['pass'])){
         $usuariosCon = new UsuariosController();
         if($usuariosCon->validar($_POST['usuario'], $_POST['pass']))
         {
-            echo "True";
+            session_start();
+            $_SESSION['usuario'] = $_POST['usuario'];
+            $_SESSION['pass'] = $_POST['pass'];
+            echo "true";
         }
         else{
-             echo "False";  
+             echo "false";  
         }
     }
 }
